@@ -1,4 +1,6 @@
 import React from "react";
+import Statistic from "./Statistic";
+
 
 function Scores({ courseName, courseResults }) {
     function getScoreClassName(score) {
@@ -30,6 +32,7 @@ function Scores({ courseName, courseResults }) {
                     ))}
                 </tbody>
             </table>
+            <Statistic results={courseResults} />
         </div>
     );
 }

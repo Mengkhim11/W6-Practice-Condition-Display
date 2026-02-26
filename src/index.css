@@ -109,3 +109,10 @@ body {
 .warning {
   color: var(--secondary-color);
 }
+.statistics { 
+  margin-top: 15px; 
+  padding: 10px; 
+  border: 1px solid #ffffff; 
+  background: orange; 
+  border-radius: 6px; 
+}

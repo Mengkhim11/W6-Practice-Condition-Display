@@ -1,6 +1,10 @@
 import React from "react";
 
 function Scores({ courseName, courseResults }) {
+    function getScoreClassName(score) {
+        return score < 50 ? "warning" : "";
+    }
+
     return (
         <div className="scores">
             <h1>{courseName}</h1>
@@ -15,11 +19,13 @@ function Scores({ courseName, courseResults }) {
                 </thead>
 
                 <tbody>
-                    {courseResults && courseResults.map((student, index) => (
+                    {courseResults.map((student, index) => (
                         <tr key={index}>
                             <td>{student.firstName}</td>
                             <td>{student.lastName}</td>
-                            <td>{student.score}</td>
+                            <td className={getScoreClassName(student.score)}>
+                                {student.score}
+                            </td>
                         </tr>
                     ))}
                 </tbody>
